@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ФИО</title>
+</head>
+
+<body>
+    Фамилия:
+    <input type="text" id="lname" value=""> <br>
+    Имя:<input type="text" id="fname" value=""> <br>
+    Отчество:<input type="text" id="patron" value="">
+    <script>
+        let name = prompt("Ваши Ф.И.О.");
+        name = name.replace(/ +/g, ' ').trim();
+        let array = name.split(" ", );
+
+        let lname0 = array[0];
+        let fname1 = array[1];
+        let patron2 = array[2];
+
+        let lname = lname0.toLowerCase(); 
+        let biglname = lname[0].toUpperCase();
+        document.getElementById('lname').value = biglname + lname.substr(1);
+
+        let fname = fname1.toLowerCase(); 
+        let bigfname = fname[0].toUpperCase();
+        document.getElementById('fname').value = bigfname + fname.substr(1);
+
+        let patron = patron2.toLowerCase(); 
+        let bigpatron = patron[0].toUpperCase();
+        document.getElementById('patron').value = bigpatron + patron.substr(1);
+    </script>
+</body>
+
+</html>
