@@ -46,7 +46,7 @@
             for (let c of comments) {
                 let c1 = c.toLowerCase();
                 let c2 = c1.replace(/ххх|xxx|viagra/g, "***")
-                checkSpam(c) ? optionsString += `<div>${c2}<hr></div>` : optionsString += `<div>${c}<hr></div>`
+                optionsString += `<div>${c2}<hr></div>`;
             }
             document.getElementById("container").innerHTML = optionsString;
         }
