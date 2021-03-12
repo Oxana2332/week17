@@ -44,9 +44,8 @@
         function generateComments() {
             let optionsString = "";
             for (let c of comments) {
-                let c1 = c.toLowerCase();
-                let c2 = c1.replace(/ххх|xxx|viagra/g, "***")
-                optionsString += `<div>${c2}<hr></div>`;
+                let c1 = c.replace(/ххх|xxx|viagra/gi, "***")
+                optionsString += `<div>${c1}<hr></div>`;
             }
             document.getElementById("container").innerHTML = optionsString;
         }
