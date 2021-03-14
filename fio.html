@@ -22,17 +22,11 @@
         let fname1 = array[1];
         let patron2 = array[2];
 
-        let lname = lname0.toLowerCase(); 
-        let biglname = lname[0].toUpperCase();
-        document.getElementById('lname').value = biglname + lname.substr(1);
+        document.getElementById('lname').value = (lname0[0].toUpperCase()) + (lname0.toLowerCase()).substr(1);
 
-        let fname = fname1.toLowerCase(); 
-        let bigfname = fname[0].toUpperCase();
-        document.getElementById('fname').value = bigfname + fname.substr(1);
+        document.getElementById('fname').value = (fname1[0].toUpperCase()) + (fname1.toLowerCase()).substr(1);
 
-        let patron = patron2.toLowerCase(); 
-        let bigpatron = patron[0].toUpperCase();
-        document.getElementById('patron').value = bigpatron + patron.substr(1);
+        document.getElementById('patron').value = (patron2[0].toUpperCase()) + (patron2.toLowerCase()).substr(1);
     </script>
 </body>
 
