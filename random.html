@@ -7,23 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Генератор случайных чисел</title>
 </head>
+
 <body>
-    <button onclick="alert(`Сгенерировали: ` + numbers + `;   Минимальное: `+ min + `;   Максимальное: ` + max + `;   Среднее арифметическое: ` + average +`;   Сумма чисел: ` + sum +`;   Произведение чисел: ` + multiply);">Генератор случайных чисел от -10 до 10</button>
+    <button
+        onclick="alert(`Сгенерировали: ` + numbers + `;   Минимальное: ` + getMinOf(numbers) + `;   Максимальное: ` + getMaxOf(numbers) + `;   Среднее арифметическое: ` + average +`;   Сумма чисел: ` + sum() +`;   Произведение чисел: ` + multiply());">Генератор
+        случайных чисел от -10 до 10</button>
 
     <script>
         function randomNumber() {
             return Math.floor(Math.random() * (10 - -10 + 1) + -10);
         };
+
         let numbers = [];
+
         for (let i = 0; i < 10; i++) {
             numbers.push(randomNumber());
         }
+
+        function getMinOf(numbers) {
+            return Math.min.apply(null, numbers);
+        }
+
+        function getMaxOf(numbers) {
+            return Math.max.apply(null, numbers);
+        }
+
+        function sum() {
+            let summa = Number();
+            for (let number of numbers) {
+                summa += Number(number);
+            }
+            return summa;
+        }
+
+        let average = sum() / 10;
+
+        function multiply() {
+            let mul = 1;
+            
+            for (var i = 0; i < numbers.length; i++) {
+                mul = mul * numbers[i];
+            }
+            return mul;
+        }
+
         numbers.join();
-        let min = Math.min(numbers[0], numbers[1], numbers[2], numbers[3], numbers[4], numbers[5], numbers[6], numbers[7], numbers[8], numbers[9]);
-        let max = Math.max(numbers[0], numbers[1], numbers[2], numbers[3], numbers[4], numbers[5], numbers[6], numbers[7], numbers[8], numbers[9]);
-        let sum = numbers[0] + numbers[1] + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + numbers[7] +numbers[8] +numbers[9];
-        let average = sum / 10;
-        let multiply = numbers[0] * numbers[1] * numbers[2] * numbers[3] * numbers[4] * numbers[5] * numbers[6] * numbers[7] * numbers[8] * numbers[9];
     </script>
 </body>
 
